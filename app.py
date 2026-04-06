@@ -1,6 +1,25 @@
 import pandas as pd
 import streamlit as st
 
+@st.cache_data(show_spinner=False)
+def load_file(uploaded_file):
+    file_name = uploaded_file.name.lower()
+
+    if file_name.endswith(".csv"):
+        for encoding in ["utf-8", "utf-8-sig", "latin1"]:
+            try:
+                uploaded_file.seek(0)
+                return pd.read_csv(uploaded_file, encoding=encoding)
+            except Exception:
+                continue
+        raise ValueError("Unable to read CSV file.")
+
+    if file_name.endswith((".xlsx", ".xls")):
+        uploaded_file.seek(0)
+        return pd.read_excel(uploaded_file)
+
+    raise ValueError("Unsupported file type.")
+
 from src.config import APP_SUBTITLE, APP_TITLE, MATCH_MODES
 from src.matcher import (
     combine_results_to_excel,
@@ -44,12 +63,13 @@ st.markdown(
 
 
 @st.cache_data(show_spinner=False)
-def load_file(uploaded_file) -> pd.DataFrame:
-    file_name = uploaded_file.name.lower()
-    if file_name.endswith(".csv"):
-        return pd.read_csv(uploaded_file)
-    return pd.read_excel(uploaded_file)
+def load_sample_pair(sample_choice: str) -> tuple[pd.DataFrame, pd.DataFrame]:
+    if sample_choice == "System A vs B (Sample Data)":
+        df_a = pd.read_csv("sample_data/client_list_system_a.csv")
+        df_b = pd.read_csv("sample_data/client_list_system_b.csv")
+        return df_a, df_b
 
+    raise ValueError(f"Unknown sample selection: {sample_choice}")
 
 def empty_match_df() -> pd.DataFrame:
     return pd.DataFrame(
@@ -302,22 +322,58 @@ def metric(label: str, value: str, help_text: str | None = None) -> None:
 st.title(APP_TITLE)
 st.caption(APP_SUBTITLE)
 
-st.subheader("Upload files")
-col_up_1, col_up_2 = st.columns(2)
-with col_up_1:
-    file_a = st.file_uploader("Upload File A", type=["csv", "xlsx", "xls"], key="file_a")
-with col_up_2:
-    file_b = st.file_uploader("Upload File B", type=["csv", "xlsx", "xls"], key="file_b")
+st.markdown(
+    """
+### What this tool does
 
-if not (file_a and file_b):
-    st.info("Upload both files to begin.")
-    st.stop()
+Upload two files, or use sample data, to:
+- reconcile records across two sources
+- identify exact and likely matches
+- highlight missing or unmatched records
+- surface field-level differences for analyst review
+"""
+)
 
-try:
-    df_a = load_file(file_a)
-    df_b = load_file(file_b)
-except Exception as exc:
-    st.error(f"Failed to read files: {exc}")
+st.subheader("Choose data source")
+
+sample_choice = st.selectbox(
+    "Use sample data or upload your own files",
+    options=[
+        "Upload my own files",
+        "System A vs B (Sample Data)",
+    ],
+)
+
+use_sample_data = sample_choice != "Upload my own files"
+
+if use_sample_data:
+    try:
+        df_a, df_b = load_sample_pair(sample_choice)
+        st.success(f"Loaded sample dataset: {sample_choice}")
+    except Exception as exc:
+        st.error(f"Failed to load sample data: {exc}")
+        st.stop()
+else:
+    st.subheader("Upload files")
+    col_up_1, col_up_2 = st.columns(2)
+    with col_up_1:
+        file_a = st.file_uploader("Upload File A", type=["csv", "xlsx", "xls"], key="file_a")
+    with col_up_2:
+        file_b = st.file_uploader("Upload File B", type=["csv", "xlsx", "xls"], key="file_b")
+
+    if not (file_a and file_b):
+        st.info("Upload both files to begin, or switch to a sample dataset above.")
+        st.stop()
+
+    try:
+        df_a = load_file(file_a)
+        df_b = load_file(file_b)
+    except Exception as exc:
+        st.error(f"Failed to read files: {exc}")
+        st.stop()
+
+if df_a.empty or df_b.empty:
+    st.error("One of the selected datasets is empty.")
     st.stop()
 
 prev_a, prev_b = st.columns(2)

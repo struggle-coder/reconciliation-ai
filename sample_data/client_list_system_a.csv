@@ -1,0 +1,101 @@
+Entity ID,Entity Name,Country,Risk Category,Status
+ENT-0001,Northern Holdings,Singapore,High,Active
+ENT-0002,Eastern Capital,Malaysia,Medium,Active
+ENT-0003,Western Trading,Indonesia,High,Active
+ENT-0004,Southern Logistics,Thailand,High,Active
+ENT-0005,Global Industries,Vietnam,Medium,Active
+ENT-0006,Prime Partners,Philippines,Low,Active
+ENT-0007,Summit Advisory,India,High,Active
+ENT-0008,Blue Ventures,United Kingdom,Medium,Active
+ENT-0009,Silver Services,United States,High,Dormant
+ENT-0010,Golden Group,Australia,Medium,Active
+ENT-0011,Urban Foods,Singapore,Medium,Active
+ENT-0012,Pacific Retail,Malaysia,Low,Active
+ENT-0013,Crown Energy,Indonesia,High,Active
+ENT-0014,Vertex Capital,Thailand,Medium,Active
+ENT-0015,Delta Logistics,Vietnam,High,Active
+ENT-0016,Beacon Resources,Philippines,Medium,Active
+ENT-0017,Atlas Pharma,India,High,Active
+ENT-0018,Harbor Telecom,United Kingdom,Medium,Active
+ENT-0019,Pioneer Group,United States,Medium,Dormant
+ENT-0020,Liberty Motors,Australia,Low,Active
+ENT-0021,Meridian Advisory,Singapore,Medium,Active
+ENT-0022,Nova Shipping,Malaysia,High,Active
+ENT-0023,Orion Insurance,Indonesia,High,Active
+ENT-0024,Zenith Foods,Thailand,Low,Active
+ENT-0025,Evergreen Trading,Vietnam,Medium,Active
+ENT-0026,Frontier Logistics,Philippines,Medium,Active
+ENT-0027,Ironwood Capital,India,High,Active
+ENT-0028,Sunrise Ventures,United Kingdom,Medium,Active
+ENT-0029,Stonebridge Services,United States,Low,Dormant
+ENT-0030,Redwood Group,Australia,Medium,Active
+ENT-0031,Maple Retail,Singapore,Low,Active
+ENT-0032,Aurora Energy,Malaysia,High,Active
+ENT-0033,Titan Resources,Indonesia,High,Active
+ENT-0034,Helix Pharma,Thailand,Medium,Active
+ENT-0035,Cobalt Telecom,Vietnam,Medium,Active
+ENT-0036,Granite Motors,Philippines,Low,Active
+ENT-0037,Northstar Holdings,India,High,Active
+ENT-0038,Clearwater Capital,United Kingdom,Medium,Active
+ENT-0039,Oakline Trading,United States,Medium,Dormant
+ENT-0040,Skylark Logistics,Australia,High,Active
+ENT-0041,Monarch Industries,Singapore,Medium,Active
+ENT-0042,Crescent Partners,Malaysia,Low,Active
+ENT-0043,Driftwood Advisory,Indonesia,Medium,Active
+ENT-0044,Valiant Ventures,Thailand,Medium,Active
+ENT-0045,Brightline Services,Vietnam,Low,Active
+ENT-0046,Lighthouse Group,Philippines,Medium,Active
+ENT-0047,Riverstone Foods,India,Low,Active
+ENT-0048,Mariner Retail,United Kingdom,Medium,Active
+ENT-0049,Blackstone Energy,United States,High,Dormant
+ENT-0050,Whitepeak Capital,Australia,Medium,Active
+ENT-0051,Emerald Shipping,Singapore,High,Active
+ENT-0052,Straits Insurance,Malaysia,High,Active
+ENT-0053,Kingfisher Foods,Indonesia,Low,Active
+ENT-0054,TrueNorth Trading,Thailand,Medium,Active
+ENT-0055,Bridgewater Logistics,Vietnam,High,Active
+ENT-0056,Foundry Resources,Philippines,Medium,Active
+ENT-0057,Medallion Pharma,India,High,Active
+ENT-0058,Signal Telecom,United Kingdom,Medium,Active
+ENT-0059,Roadster Motors,United States,Low,Dormant
+ENT-0060,Ironclad Holdings,Australia,Medium,Active
+ENT-0061,Seabreeze Capital,Singapore,Medium,Active
+ENT-0062,Anchor Trading,Malaysia,Low,Active
+ENT-0063,Jetstream Logistics,Indonesia,High,Active
+ENT-0064,Forge Industries,Thailand,Medium,Active
+ENT-0065,Keystone Partners,Vietnam,Low,Active
+ENT-0066,Highland Advisory,Philippines,Medium,Active
+ENT-0067,Northbridge Ventures,India,Medium,Active
+ENT-0068,Willow Services,United Kingdom,Low,Active
+ENT-0069,Legacy Group,United States,Medium,Dormant
+ENT-0070,Harvest Foods,Australia,Low,Active
+ENT-0071,Metro Retail,Singapore,Low,Active
+ENT-0072,Bluewave Energy,Malaysia,High,Active
+ENT-0073,Terra Resources,Indonesia,High,Active
+ENT-0074,Pulse Pharma,Thailand,Medium,Active
+ENT-0075,Connect Telecom,Vietnam,Medium,Active
+ENT-0076,Apex Motors,Philippines,Low,Active
+ENT-0077,Parkview Holdings,India,Medium,Active
+ENT-0078,Silverline Capital,United Kingdom,High,Active
+ENT-0079,Eastgate Trading,United States,Medium,Dormant
+ENT-0080,Corepoint Logistics,Australia,High,Active
+ENT-0081,Reliance Industries,Singapore,Medium,Active
+ENT-0082,Peak Partners,Malaysia,Low,Active
+ENT-0083,Northshore Advisory,Indonesia,Medium,Active
+ENT-0084,Openfield Ventures,Thailand,Medium,Active
+ENT-0085,Trusted Services,Vietnam,Low,Active
+ENT-0086,Victory Group,Philippines,Medium,Active
+ENT-0087,Lotus Foods,India,Low,Active
+ENT-0088,Marketline Retail,United Kingdom,Medium,Active
+ENT-0089,Redline Energy,United States,High,Dormant
+ENT-0090,Northbank Capital,Australia,High,Active
+ENT-0091,Bayfront Shipping,Singapore,High,Active
+ENT-0092,Shield Insurance,Malaysia,High,Active
+ENT-0093,Freshcore Foods,Indonesia,Low,Active
+ENT-0094,Landmark Trading,Thailand,Medium,Active
+ENT-0095,Swiftpath Logistics,Vietnam,High,Active
+ENT-0096,Terrafirm Resources,Philippines,Medium,Active
+ENT-0097,Nexa Pharma,India,High,Active
+ENT-0098,Wavecrest Telecom,United Kingdom,Medium,Active
+ENT-0099,Velocity Motors,United States,Low,Dormant
+ENT-0100,Union Holdings,Australia,Medium,Active
